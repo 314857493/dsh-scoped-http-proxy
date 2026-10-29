@@ -9,10 +9,10 @@ An opt-in HTTP proxy service and live address/port settings for DeepSeek Harness
 Requires Node.js 22.19+. Tested with Cordis 4.0.5 and DSH web settings 0.2.1-rc.4.
 
 ```sh
-dsh plugin --profile web add 'git+https://github.com/314857493/dsh-scoped-http-proxy.git#v0.1.0'
+dsh plugin --profile web add 'git+https://github.com/314857493/dsh-scoped-http-proxy.git#v0.1.1'
 ```
 
-Restart DSH, then open Settings → Plugins → Scoped HTTP proxy. Enter an HTTP(S) proxy URL, including the port, and save. Default: `http://127.0.0.1:7897`. IPv6 is supported; SOCKS, credentials, paths, queries, and fragments are rejected.
+Restart DSH, then open Plugins → Scoped HTTP proxy. Enter an HTTP(S) proxy URL, including the port, and save. Default: `http://127.0.0.1:7897`. IPv6 is supported; SOCKS, credentials, paths, queries, and fragments are rejected.
 
 Changes persist in the profile's Cordis patch. New requests use the saved address; in-flight responses drain normally. Installing this service alone does not reroute any existing plugin.
 

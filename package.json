@@ -1,6 +1,6 @@
 {
   "name": "dsh-scoped-http-proxy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Opt-in HTTP proxy service and live settings for DSH plugins; no global proxy changes",
   "type": "module",
   "main": "src/index.js",

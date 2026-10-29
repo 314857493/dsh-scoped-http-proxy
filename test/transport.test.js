@@ -23,6 +23,10 @@ async function proxy(t, label) {
 }
 
 test("proxy address validates and is exposed as a live setting", () => {
+  const wireSchema = JSON.parse(JSON.stringify(Config));
+  const field = wireSchema.refs[wireSchema.refs[wireSchema.uid].dict.proxyUrl];
+  assert.equal(field.type, "string");
+  assert.ok(field.meta.pattern);
   assert.equal(Config({}).proxyUrl.get(), "http://127.0.0.1:7897/");
   assert.equal(
     normalizeProxyUrl(" http://localhost:8080 "),
@@ -37,7 +41,7 @@ test("proxy address validates and is exposed as a live setting", () => {
     "http://localhost?key=1",
     "http://localhost:99999",
   ]) {
-    assert.throws(() => Config({ proxyUrl: value }));
+    assert.throws(() => normalizeProxyUrl(value));
   }
 });
 

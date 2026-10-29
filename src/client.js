@@ -123,7 +123,7 @@ export function ProxySettings({ form, t, view }) {
       disabled,
       invalidLabel: t("invalid"),
       placeholder: DEFAULT_PROXY_URL,
-      overridden: text !== DEFAULT_PROXY_URL,
+      overridden: invalid || normalizeProxyUrl(text) !== DEFAULT_PROXY_URL,
       overriddenLabel: t("overridden"),
       resetLabel: t("reset"),
       onEdit: edit,

@@ -11,10 +11,10 @@
 Node.js 22.19+；已验证 DSH Desktop 的 Cordis 4.0.5 / Web 设置接口 0.2.1-rc.4。
 
 ```sh
-dsh plugin --profile web add 'git+https://github.com/314857493/dsh-scoped-http-proxy.git#v0.1.0'
+dsh plugin --profile web add 'git+https://github.com/314857493/dsh-scoped-http-proxy.git#v0.1.1'
 ```
 
-重启 DSH，打开 **设置 → 插件 → 独立 HTTP 代理**，填写完整地址，例如 `http://127.0.0.1:7897`，点击保存。支持 HTTP(S) 代理和 IPv6 地址；不支持 SOCKS、内嵌账号密码或 URL 路径。
+重启 DSH，打开 **侧边栏「插件」→ 独立 HTTP 代理**，填写完整地址，例如 `http://127.0.0.1:7897`，点击保存。支持 HTTP(S) 代理和 IPv6 地址；不支持 SOCKS、内嵌账号密码或 URL 路径。
 
 保存到当前 profile 的 Cordis patch。后续请求使用新地址，现有请求继续完成。默认地址为 `http://127.0.0.1:7897`。
 
