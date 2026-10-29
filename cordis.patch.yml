@@ -1,0 +1,5 @@
+- insert:
+    - id: scoped-http-proxy
+      name: dsh-scoped-http-proxy
+      config:
+        proxyUrl: http://127.0.0.1:7897
